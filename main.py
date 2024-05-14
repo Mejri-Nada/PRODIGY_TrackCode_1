@@ -12,6 +12,9 @@ class CaesarCipherGUI(QWidget):
         self.setFixedSize(400, 300)
         self.setWindowFlags(Qt.FramelessWindowHint)  # Remove window frame
 
+        with open('style.qss', 'r') as f:
+            self.setStyleSheet(f.read())
+
         # Widgets
         self.mode_label = QLabel('Mode:')
         self.mode_encrypt_btn = QPushButton('Encrypt')

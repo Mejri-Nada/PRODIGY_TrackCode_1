@@ -1,0 +1,40 @@
+/* style.qss */
+QWidget {
+    background-color: black;
+    color: green;
+    font-family: Arial, sans-serif;
+}
+
+QPushButton {
+    background-color: black;
+    color: green;
+    border: 2px solid green;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+    background-color: #45a049;
+    color: black;
+}
+
+QTextEdit, QLineEdit {
+    background-color: black;
+    border: 1px solid green;
+    border-radius: 5px;
+    padding: 5px;
+    color:white;
+}
+QTextEdit:hover, QLineEdit:hover {
+    background-color:rgba(0, 255, 0, 0.1);;
+    color: white;
+}
+
+QLabel {
+    font-weight: bold;
+}
+
+#RoundedFrame {
+    background-color: white;
+    border-radius: 15px;
+}
