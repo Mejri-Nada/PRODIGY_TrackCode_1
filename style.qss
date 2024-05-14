@@ -4,18 +4,20 @@ QWidget {
     color: green;
     font-family: Arial, sans-serif;
 
+
 }
 QPushButton#exitButton {
-    background-color: none; /* Example: Red background */
-    color: white; /* Example: White text color */
-    border: 1px solid red;
-    padding: 8px 8px;
+    background-color: transparent; /* Example: Red background */
+    color: green; /* Example: White text color */
+    border: 1px solid green;
+    padding: 1px 3px;
     border-radius: 5px;
-    width:50%;
+    width:10px;
 }
 QLabel#text_label{
     text-transform:uppercase;
-    
+    font-size: 60px; /* Change the font size to 16 pixels */
+    margin:30px;
 }
 
 QPushButton {
@@ -27,12 +29,11 @@ QPushButton {
     border-radius: 5px;
 }
 
-QPushButton:hover {
+QPushButton:hover,#exitButton:hover {
     background-color: #45a049;
     color: black;
     margin:5px;
 }
-
 
 QTextEdit, QLineEdit {
     background-color: black;
