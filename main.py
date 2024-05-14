@@ -9,13 +9,35 @@ class CaesarCipherGUI(QWidget):
 
     def initUI(self):
         self.setWindowTitle('Caesar Cipher')
-        self.setFixedSize(400, 300)
+        self.setFixedSize(500, 400)
         self.setWindowFlags(Qt.FramelessWindowHint)  # Remove window frame
+
+        # Add text label
+        text_label = QLabel('CAESAR CIPHER ', self)
+        text_label.setAlignment(Qt.AlignCenter)
+
+        text_labell = QLabel(' ', self)
+        text_labell.setAlignment(Qt.AlignCenter)
+        # Add the close button
+        exit_button = QPushButton('Close', self)
+        exit_button.setObjectName('exitButton')
+        exit_button.clicked.connect(self.close)  # Connect button click signal to close method
+
+
+        # Add text and close button to a horizontal layout
+        hbox = QHBoxLayout()
+        hbox.addWidget(text_label)
+        hbox.addWidget(text_labell)
+        hbox.addWidget(exit_button)
+
+        # Create the main vertical layout
+        vbox = QVBoxLayout()
+        vbox.addLayout(hbox)
 
         with open('style.qss', 'r') as f:
             self.setStyleSheet(f.read())
 
-        # Widgets
+        # Widgets for the rest of the UI
         self.mode_label = QLabel('Mode:')
         self.mode_encrypt_btn = QPushButton('Encrypt')
         self.mode_decrypt_btn = QPushButton('Decrypt')
@@ -29,8 +51,7 @@ class CaesarCipherGUI(QWidget):
         self.result_label = QLabel('Result:')
         self.result_textedit = QTextEdit()
 
-        # Layout
-        vbox = QVBoxLayout()
+        # Layout for the rest of the UI
         hbox1 = QHBoxLayout()
         hbox2 = QHBoxLayout()
         hbox3 = QHBoxLayout()
